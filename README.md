@@ -53,7 +53,7 @@ Interact with the deployed app here:
 - **Model performance:** Random Forest provides balanced precision/recall and interpretability.  
 - **Feature importance:** Key drivers of risk prediction.  
 
-![Feature Importance](imgs/feature_importance.png)
+![Feature Importance](imgs/AI_Startup_Risk_Radar_Interface.jpg)
 
 ---
 
