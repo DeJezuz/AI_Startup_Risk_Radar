@@ -1,3 +1,4 @@
 gradio
 scikit-learn
 pandas
+matplotlib
