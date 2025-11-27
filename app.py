@@ -3,9 +3,9 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
 # Load dataset
-df = pd.read_csv("data/startup_risks.csv")
-X = df.drop("risk_level", axis=1)
-y = df["risk_level"]
+df = pd.read_csv("startup_risks.csv")  # make sure this file has 'risk_level'
+X = df.drop("risk_level", axis=1)      # features
+y = df["risk_level"]                   # target
 
 # Train model
 model = RandomForestClassifier(random_state=42)
