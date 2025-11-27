@@ -1,9 +1,10 @@
-# AI Startup Risk Radar
+# 🚀 AI Startup Risk Radar
 
-![Merit Badge](https://img.shields.io/badge/PLP-Final_Project-blue?style=for-the-badge&logo=rocket)
-![Python](https://img.shields.io/badge/Python-3.9+-yellow?style=for-the-badge&logo=python)
-![scikit-learn](https://img.shields.io/badge/ML-scikit--learn-orange?style=for-the-badge&logo=scikit-learn)
-![Colab](https://img.shields.io/badge/Run-Google_Colab-green?style=for-the-badge&logo=googlecolab)
+![Merit Badge](https://img.shields.io/badge/PLP-Final_Project-blue?style=for-the-badge&logo=rocket)  
+![Python](https://img.shields.io/badge/Python-3.9+-yellow?style=for-the-badge&logo=python)  
+![scikit-learn](https://img.shields.io/badge/ML-scikit--learn-orange?style=for-the-badge&logo=scikit-learn)  
+![Colab](https://img.shields.io/badge/Run-Google_Colab-green?style=for-the-badge&logo=googlecolab)  
+[![Hugging Face Spaces](https://img.shields.io/badge/🤗-Live_Demo-blue?style=for-the-badge&logo=huggingface)](https://huggingface.co/spaces/Dejezuz001/AI_Startup_Radar)
 
 ---
 
@@ -20,58 +21,63 @@ This project blends **AI, entrepreneurship, and project management** into a prac
 
 ---
 
-## Quickstart
-1. **Open notebook:** notebooks/AI_Startup_Risk_Radar.ipynb in Google Colab.
-2. **Run cells:** The notebook loads data from data/startup_risks.csv.
-3. **View outputs:** Feature importance and risk radar charts saved to imgs/.
+## ⚡ Quickstart
+### 🔹 Run in Google Colab
+1. **Open notebook:** `notebooks/AI_Startup_Risk_Radar.ipynb` in Google Colab.  
+2. **Run cells:** The notebook loads data from `data/startup_risks.csv`.  
+3. **View outputs:** Feature importance and risk radar charts saved to `imgs/`.
+
+### 🔹 Try the Live Demo
+Interact with the deployed app here:  
+👉 [AI Startup Risk Radar on Hugging Face Spaces](https://huggingface.co/spaces/Dejezuz001/AI_Startup_Radar)
 
 ---
 
-## Dataset
-- **Path:** data/startup_risks.csv
-- **Rows:** 150 synthetic startup profiles
+## 📂 Dataset
+- **Path:** `data/startup_risks.csv`  
+- **Rows:** 150 synthetic startup profiles  
 - **Features:**
-  - **Budget:** Project budget (USD)
-  - **Team size:** Number of team members
-  - **Deadline months:** Project timeline
-  - **Market score:** Market attractiveness (1–10)
-  - **Product maturity:** Stage (1–5)
-  - **Founder experience:** Years of experience
-  - **Competition intensity:** Competitive pressure (1–10)
-  - **Runway months:** Cash runway
-- **Target:** risk_level (Low, Medium, High)
+  - **Budget:** Project budget (USD)  
+  - **Team size:** Number of team members  
+  - **Deadline months:** Project timeline  
+  - **Market score:** Market attractiveness (1–10)  
+  - **Product maturity:** Stage (1–5)  
+  - **Founder experience:** Years of experience  
+  - **Competition intensity:** Competitive pressure (1–10)  
+  - **Runway months:** Cash runway  
+- **Target:** `risk_level` (Low, Medium, High)
 
 ---
 
-## Results
-- **Model performance:** Random Forest provides balanced precision/recall and interpretability.
-- **Feature importance:** Key drivers of risk prediction.
+## 📊 Results
+- **Model performance:** Random Forest provides balanced precision/recall and interpretability.  
+- **Feature importance:** Key drivers of risk prediction.  
 
 ![Feature Importance](imgs/feature_importance.png)
 
 ---
 
-## Case studies
-- **Case A (High risk):** Low budget, short runway, high competition.
-- **Case B (Medium risk):** Moderate resources, tighter deadlines.
-- **Case C (Low risk):** Strong budget, experienced founder, long runway.
+## 🧪 Case Studies
+- **Case A (High risk):** Low budget, short runway, high competition.  
+- **Case B (Medium risk):** Moderate resources, tighter deadlines.  
+- **Case C (Low risk):** Strong budget, experienced founder, long runway.  
 
 ---
 
-## Architecture
-- **Input:** CSV with startup attributes
-- **Model:** Scikit-learn Random Forest classifier
-- **Output:** Risk label (Low/Medium/High) + category scores
-- **Visualization:** Feature importance + radar charts
+## 🏗️ Architecture
+- **Input:** CSV with startup attributes  
+- **Model:** Scikit-learn Random Forest classifier  
+- **Output:** Risk label (Low/Medium/High) + category scores  
+- **Visualization:** Feature importance + radar charts  
 
 ---
 
-## Impact
-- **Students:** Learn risk-aware entrepreneurship through interpretable AI.
-- **Entrepreneurs:** Anticipate risks and plan mitigations early.
-- **PLP:** A clear, practical example of AI applied to project management.
+## 🌍 Impact
+- **Students:** Learn risk-aware entrepreneurship through interpretable AI.  
+- **Entrepreneurs:** Anticipate risks and plan mitigations early.  
+- **PLP:** A clear, practical example of AI applied to project management.  
 
 ---
 
-## License
+## 📜 License
 MIT
