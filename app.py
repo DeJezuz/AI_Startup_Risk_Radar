@@ -1,37 +1,35 @@
-import streamlit as st
+import gradio as gr
 import pandas as pd
-import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
 
 # Load dataset
 df = pd.read_csv("data/startup_risks.csv")
-
-# Train model
 X = df.drop("risk_level", axis=1)
 y = df["risk_level"]
+
+# Train model
 model = RandomForestClassifier(random_state=42)
 model.fit(X, y)
 
-st.title("🚀 AI Startup Risk Radar")
-st.write("Predict startup risk levels and visualize vulnerabilities.")
+# Prediction function
+def predict_risk(budget, team_size, deadline_months, runway_months):
+    input_df = pd.DataFrame([[budget, team_size, deadline_months, runway_months]],
+                            columns=["budget", "team_size", "deadline_months", "runway_months"])
+    prediction = model.predict(input_df)[0]
+    return f"Predicted Risk Level: {prediction}"
 
-# User input
-budget = st.slider("Budget (USD)", 10000, 500000, 100000)
-team_size = st.slider("Team Size", 1, 50, 5)
-deadline = st.slider("Deadline (months)", 1, 24, 6)
-runway = st.slider("Runway (months)", 1, 24, 12)
+# Gradio interface
+demo = gr.Interface(
+    fn=predict_risk,
+    inputs=[
+        gr.Slider(10000, 500000, label="Budget (USD)"),
+        gr.Slider(1, 50, label="Team Size"),
+        gr.Slider(1, 24, label="Deadline (Months)"),
+        gr.Slider(1, 24, label="Runway (Months)")
+    ],
+    outputs="text",
+    title="🚀 AI Startup Risk Radar",
+    description="Predict startup risk level based on key attributes."
+)
 
-# Make prediction
-input_data = pd.DataFrame([[budget, team_size, deadline, runway]],
-                          columns=["budget", "team_size", "deadline_months", "runway_months"])
-prediction = model.predict(input_data)[0]
-
-st.subheader("Predicted Risk Level:")
-st.write(f"**{prediction}**")
-
-# Feature importance chart
-importances = model.feature_importances_
-fig, ax = plt.subplots()
-ax.bar(X.columns, importances)
-ax.set_title("Feature Importance")
-st.pyplot(fig)
+demo.launch()
