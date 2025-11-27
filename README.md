@@ -1,6 +1,6 @@
 # AI Startup Risk Radar
 
-![Merit Badge](https://img.shields.io/badge/PLP-Final Project-blue?style=for-the-badge&logo=rocket)
+![Merit Badge](https://img.shields.io/badge/PLP-Final_Project-blue?style=for-the-badge&logo=rocket)
 ![Python](https://img.shields.io/badge/Python-3.9+-yellow?style=for-the-badge&logo=python)
 ![scikit-learn](https://img.shields.io/badge/ML-scikit--learn-orange?style=for-the-badge&logo=scikit-learn)
 ![Colab](https://img.shields.io/badge/Run-Google_Colab-green?style=for-the-badge&logo=googlecolab)
